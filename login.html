@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>AUTHENTICATION FORM</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <form action="#" class="login active">
+        <h1 class="title">Login with your Account</h1>
+        <div class="form-group">
+            <label for="login-email">Email</label>
+            <div class="input-group">
+                <input type="email" id="login-email" placeholder="Email Address" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <div class="input-group">
+                <input type="password" id="login-password" pattern=".{8,}" placeholder="Your Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+        </div>
+        <button type="submit" class="btn-submit">Login</button>
+        <a href="#">Forgot Password</a>
+        <p>I don't have an Account. <a href="#" onclick="switchForm('register', event)">Register</a></p>
+    </form>
+
+    <!-- Register Form -->
+    <form action="#" class="register">
+        <h1 class="title">Register your Account</h1>
+        <div class="form-group">
+            <label for="register-email">Email</label>
+            <div class="input-group">
+                <input type="email" id="register-email" placeholder="Email Address" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="register-password">Password</label>
+            <div class="input-group">
+                <input type="password" id="register-password" pattern=".{8,}" placeholder="Your Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <span class="help-text">At least 8 characters</span>
+        </div>
+        <div class="form-group">
+            <label for="Confirmpass">Confirm Password</label>
+            <div class="input-group">
+                <input type="password" id="Confirmpass" placeholder="Enter Password Again" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <span class="help-text">Confirm-password must be same with password</span>
+        </div>
+        <button type="submit" class="btn-submit">Register</button>
+        <p>I already have an Account. <a href="#" onclick="switchForm('login', event)">Login</a></p>
+    </form>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
